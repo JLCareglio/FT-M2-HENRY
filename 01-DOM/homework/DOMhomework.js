@@ -104,7 +104,7 @@ function displayToDos() {
 //  3) Setear el valor del input toDoInput como un string vacio ("") (Esto se realiza para que en la vista se borre lo que se encontraba escrito)
 //  4) Llamar a la función displayToDos para que se actualicen los toDos mostrados en pantalla
 
-function addToDo(pE = null, text = document.querySelector("#toDoInput").value) {
+function addToDo(pE, text = document.querySelector("#toDoInput").value) {
   // Tu código acá:
   console.log("PointerEvent :", pE, "valor en toDoInput: ", text);
   if (text) {
