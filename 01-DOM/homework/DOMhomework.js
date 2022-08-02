@@ -6,6 +6,10 @@ let toDoItems = [];
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
 // agregar tu nombre al final del texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
+
+let titulo = document.querySelector("#createdBy");
+titulo.innerHTML = titulo.innerHTML + " Franco";
+
 document.querySelector("#createdBy").innerHTML +=
   " Jesús Lautaro Careglio Albornoz";
 
@@ -28,7 +32,7 @@ function ToDo(description) {
 
 // Tu código acá:
 ToDo.prototype.completeToDo = function () {
-  this.complete = true;
+  this.complete = !this.complete;
 };
 // Agregar dos parámetros a la función 'buildToDo':
 //    1) Un objeto de la clase ToDo
@@ -50,14 +54,14 @@ ToDo.prototype.completeToDo = function () {
 function buildToDo(todo, index) {
   // Tu código acá:
   let toDoShell = document.createElement("div"); // 1)
-  toDoShell.classList.add("toDoShell"); // 2)
+  toDoShell.className = "toDoShell"; // 2)
   let toDoText = document.createElement("span"); // 3)
   toDoText.innerHTML = todo.description; // 4)
   toDoText.id = index; // 5)
 
   toDoText.addEventListener("click", completeToDo);
-  
-  if (todo.complete) toDoText.classList.add("completeText"); //6
+
+  if (todo.complete) toDoText.className = "completeText"; //6
   toDoShell.appendChild(toDoText); // 7)
   return toDoShell; // 8)
 }
@@ -69,8 +73,7 @@ function buildToDo(todo, index) {
 
 function buildToDos(toDos) {
   // Tu código acá:
-  let objsToDo = [];
-  toDos.forEach((toDo, i) => objsToDo.push(buildToDo(toDo, i)));
+  let objsToDo = toDos.map(buildToDo);
   return objsToDo;
 }
 
@@ -88,7 +91,8 @@ function displayToDos() {
   let toDoContainer = document.querySelector("#toDoContainer"); // 1)
   toDoContainer.innerHTML = ""; // 2)
   let objsToDo = buildToDos(toDoItems); // 3)
-  objsToDo.forEach((objToDo) => (toDoContainer.innerHTML += objToDo.innerHTML)); // 4
+
+  objsToDo.forEach((objToDo) => toDoContainer.appendChild(objToDo)); // 4
 }
 
 // La función 'addToDo' agregará un nuevo ToDo al array 'toDoItems'
@@ -100,10 +104,13 @@ function displayToDos() {
 //  3) Setear el valor del input toDoInput como un string vacio ("") (Esto se realiza para que en la vista se borre lo que se encontraba escrito)
 //  4) Llamar a la función displayToDos para que se actualicen los toDos mostrados en pantalla
 
-function addToDo(toDoInput = document.querySelector("#toDoInput").value) {
+function addToDo(pE = null, text = document.querySelector("#toDoInput").value) {
   // Tu código acá:
-  let toDo = new ToDo(toDoInput); // 1)
-  toDoItems.push(toDo); // 2)
+  console.log("PointerEvent :", pE, "valor en toDoInput: ", text);
+  if (text) {
+    let toDo = new ToDo(text); // 1)
+    toDoItems.push(toDo); // 2)
+  }
   document.querySelector("#toDoInput").value = ""; // 3)
   displayToDos(); // 4)
   return toDoItems;
@@ -116,6 +123,9 @@ function addToDo(toDoInput = document.querySelector("#toDoInput").value) {
 
 // Tu código acá:
 document.querySelector("#addButton").addEventListener("click", addToDo);
+document.querySelector("#toDoInput").addEventListener("keypress", (e) => {
+  if (e.key === "Enter") addToDo();
+});
 
 // La función completeToDo se va a ejecutar cuando queramos completar un todo
 // [NOTA: Algunas cuestiones a tener en cuenta
@@ -133,6 +143,7 @@ function completeToDo(event) {
   // DESCOMENTAR LA SIGUIENTE LINEA
   const index = event.target.id;
   // Tu código acá:
+  toDoItems[index].completeToDo();
   displayToDos();
   return index;
 }
