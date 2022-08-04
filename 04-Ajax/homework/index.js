@@ -4,7 +4,7 @@ $("#boton").click(function () {
     console.log(amigos);
     amigos.forEach((amigo) => {
       let li = document.createElement("li");
-      li.innerHTML = `${amigo.name} - ${amigo.age} años - ${amigo.email}`;
+      li.innerHTML = `id: ${amigo.id} - ${amigo.name} - ${amigo.age} años`;
       document.getElementById("lista").appendChild(li);
     });
   });
@@ -30,7 +30,7 @@ $("#delete").click(function () {
     url: eliminarA,
     type: "DELETE",
     success: function (result) {
-      console.log(result)
+      console.log(result);
     },
   });
 });

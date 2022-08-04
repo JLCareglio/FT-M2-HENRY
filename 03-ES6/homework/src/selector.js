@@ -25,10 +25,13 @@ var selectorTypeMatcher = function (selector) {
   if (selector[0] == "#") return "id";
   else if (selector[0] == ".") return "class";
   else if (selector.includes(".")) return "tag.class";
-  else {
-    let tags = selector.split(" > ");
-    return tags[0];
-  }
+  else if (selector.includes(">")) {
+    let tags = selector.split(">");
+    return "tag > ".repeat(tags.length).slice(0, -3);
+  } else if (selector.includes(" ")) {
+    let tags = selector.split(" ");
+    return "tag ".repeat(tags.length).slice(0, -1);
+  } else return "tag";
 };
 
 // NOTA SOBRE LA FUNCIÓN MATCH
@@ -53,6 +56,9 @@ var matchFunctionMaker = function (selector) {
     };
   } else if (selectorType === "tag")
     matchFunction = (el) => el.tagName.toLowerCase() === selector.toLowerCase();
+  else if (selectorType.includes(">")) {
+  } else if (selectorType.includes(" ")) {
+  }
 
   return matchFunction;
 };
