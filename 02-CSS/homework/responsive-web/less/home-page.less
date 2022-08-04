@@ -2,10 +2,9 @@
 .home {
   color: @header-font-color;
   .intro {
-    .header-img {
-      img {
-        border-radius: 20px;
-      }
+    img {
+      border-radius: 16px;
+      width: 100%;
     }
     h2 {
       padding: 15px;
@@ -24,8 +23,17 @@
     img {
       width: 28%;
       margin: 20px 2.5%;
-      border-radius: 20px;
+      border-radius: @border-radius;
       height: 100%;
+    }
+    @media @mobile {
+      .ondas,
+      .tecnologia {
+        display: none;
+      }
+      .auricular {
+        width: 100%;
+      }
     }
   }
 
@@ -60,6 +68,16 @@
       }
 
       .btn {
+        .btn(white, @btn-bg-color);
+        @media @mobile {
+          text-align: center;
+          width: 100%;
+          padding: 15px;
+        }
+      }
+
+      @media @mobile {
+        width: 100%;
       }
     }
 
@@ -72,6 +90,15 @@
         height: auto;
         border-radius: 10px;
       }
+      @media @mobile {
+        margin: 0px;
+        width: 100%;
+      }
+    }
+    @media @mobile {
+      width: 100%;
+      .flex(column-reverse, center,center);
+      padding: 12px;
     }
   }
 }

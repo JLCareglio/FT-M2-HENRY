@@ -2,15 +2,25 @@
 nav {
   background-color: @nav-bg;
   color: @nav-font;
+  padding: 15px;
   border-bottom: 2px solid @nav-border;
   margin-bottom: 6px;
   text-align: center;
-  h1 {
+  display: flex;
+  .flex(column, center,center);
+  h2 {
+    font-size: 3.2rem;
   }
   ul {
-    display: inline-block;
-    list-style-type: none;
-    li{
+    width: 55%;
+    padding-top: 14px;
+    .flex(row, space-around, center);
+    li {
+      a {
+        font-size: 16px;
+        color: @nav-font;
+        text-decoration: none;
+      }
     }
   }
 }

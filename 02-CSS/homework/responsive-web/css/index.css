@@ -163,13 +163,30 @@ p {
 nav {
   background-color: #f6f6f6;
   color: #454a59;
+  padding: 15px;
   border-bottom: 2px solid #f1f1f1;
   margin-bottom: 6px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+nav h2 {
+  font-size: 3.2rem;
 }
 nav ul {
-  display: inline-block;
-  list-style-type: none;
+  width: 55%;
+  padding-top: 14px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+nav ul li a {
+  font-size: 16px;
+  color: #454a59;
+  text-decoration: none;
 }
 footer {
   color: #22283b;
@@ -184,8 +201,9 @@ footer {
 .home {
   color: #23293b;
 }
-.home .intro .header-img img {
-  border-radius: 20px;
+.home .intro img {
+  border-radius: 16px;
+  width: 100%;
 }
 .home .intro h2 {
   padding: 15px;
@@ -203,6 +221,15 @@ footer {
   margin: 20px 2.5%;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .music-images .ondas,
+  .home .music-images .tecnologia {
+    display: none;
+  }
+  .home .music-images .auricular {
+    width: 100%;
+  }
 }
 .home .musica-nueva {
   padding: 15px;
@@ -229,6 +256,31 @@ footer {
 .home .actual .actual-text p {
   margin-bottom: 26px;
 }
+.home .actual .actual-text .btn {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  background-color: #22283a;
+}
+.home .actual .actual-text .btn:hover {
+  background-color: #b8c0d6;
+  color: #22283a;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-text .btn {
+    text-align: center;
+    width: 100%;
+    padding: 15px;
+  }
+}
+@media (max-width: 500px) {
+  .home .actual .actual-text {
+    width: 100%;
+  }
+}
 .home .actual .actual-img {
   width: 46%;
   margin-left: 4%;
@@ -237,4 +289,20 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+@media (max-width: 500px) {
+  .home .actual .actual-img {
+    margin: 0px;
+    width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .home .actual {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+  }
 }
