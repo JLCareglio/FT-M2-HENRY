@@ -1,0 +1,8 @@
+#logoHenry {
+  margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+}

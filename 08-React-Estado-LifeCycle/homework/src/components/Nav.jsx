@@ -1,22 +1,17 @@
 import React from "react";
 import Logo from "../logoHenry.png";
 import SearchBar from "./SearchBar.jsx";
-import styled from "styled-components";
-
-const NavBar = styled.nav`
-  background-color: gray;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-`;
+import "./Nav.css";
 
 function Nav({ onSearch }) {
   return (
-    <NavBar>
-      <img src={Logo} alt="logo de Henry" />
-      <h1>PepeWeather</h1>
-      <SearchBar onSearch={onSearch}/>
-    </NavBar>
+    <div className="container">
+      <div className="imagen">
+        <img src={Logo} alt="logo" />
+      </div>
+      <span> HENRY 29C - Weather App</span>
+      <SearchBar onSearch={onSearch} />
+    </div>
   );
 }
 
