@@ -1,0 +1,19 @@
+.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: rgb(67, 67, 67);
+    border-bottom: 1px solid #e6e6e6;
+
+}
+a { 
+    text-decoration: none; 
+    color: rgb(190, 190, 0);
+    cursor: pointer;
+}
+
+a:hover {
+    color: yellow;
+}

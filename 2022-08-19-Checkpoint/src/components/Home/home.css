@@ -1,0 +1,23 @@
+.home{
+    background-color: rgb(67, 67, 67);
+    color: white;
+}
+.home a{
+    color: black;
+}
+.home h1,h4 {
+    color: yellow;
+}
+.home h3{
+    color: white;
+}
+.home h3:hover{
+    color:yellow;
+}
+.home img {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-left: 10.4rem;
+}
