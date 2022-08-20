@@ -1,0 +1,49 @@
+{
+  "teams": [
+    {
+      "id": 1,
+      "name": "Ferrari",
+      "drivers": "Charles Leclerc, Carlos Sainz",
+      "founder": "Enzo Ferrari",
+      "base": "Maranello, Italy",
+      "image": "https://img.remediosdigitales.com/96633b/140013_cor/450_1000.jpg",
+      "worldChampionships": 16
+    },
+    {
+      "id": 2,
+      "name": "Oracle Red Bull",
+      "drivers": "Max Verstappen, Sergio Perez",
+      "founder": "Dietrich Mateschitz",
+      "base": "Milton Keynes, United Kingdom",
+      "image": "https://www.oracle.com/oce/press/assets/CONT627DB01268AB4125A078BA8CD375ADEF/native/og-social-redbull.gif",
+      "worldChampionships": 4
+    },
+    {
+      "id": 3,
+      "name": "Mercedes",
+      "drivers": "Lewis Hamilton, George Russell",
+      "founder": "Norbert Haug",
+      "base": "Brackley, United Kingdom",
+      "image": "https://bizbehindsports.com/wp-content/uploads/2020/08/1582638375557.jpg",
+      "worldChampionships": 8
+    },
+    {
+      "id": 4,
+      "name": "McLaren",
+      "drivers": "Daniel Ricciardo, Lando Norris",
+      "founder": "Bruce McLaren",
+      "base": "Woking, United Kingdom",
+      "image": "https://1000marcas.net/wp-content/uploads/2020/01/McLaren-Logo-2012.jpg",
+      "worldChampionships": 8
+    },
+    {
+      "id": 5,
+      "name": "Alfa Romeo",
+      "drivers": "Valtteri Bottas, Zhou Guanyu",
+      "founder": "Nicola Romeo",
+      "base": "Hinwil, Switzerland",
+      "image": "https://www.f1latam.com/img/prin/alrolog.jpg",
+      "worldChampionships": 0
+    }
+  ]
+}

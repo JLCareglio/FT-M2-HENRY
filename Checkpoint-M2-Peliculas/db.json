@@ -1,0 +1,49 @@
+{
+  "movies": [
+   {
+    "id": 1,
+    "name": "GoodFellas",
+    "director": "Martin Scorsese",
+    "releaseYear": 1990,
+    "description": "Young Henry Hill, with his friends Jimmy and Tommy, begins the climb from being a petty criminal to a gangster on the mean streets of New York.",
+    "image": "https://m.media-amazon.com/images/M/MV5BY2NkZjEzMDgtN2RjYy00YzM1LWI4ZmQtMjIwYjFjNmI3ZGEwXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_FMjpg_UX1000_.jpg",
+    "runningTime": 146 
+   },
+   {
+    "id": 2,
+    "name": "Boyhood",
+    "director": "Richard Linklater",
+    "releaseYear": 2014,
+    "description": "After MJ's parents' divorce, he and his sister Samantha live with their mother, whereas the father has visiting rights. Incidents that occur across a period of twelve years mould MJ's life.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/a/a6/Boyhood_%282014%29.png",
+    "runningTime": 165 
+   },
+   {
+    "id": 3,
+    "name": "Apocalypse Now",
+    "director": "Francis Ford Coppola",
+    "releaseYear": 1980,
+    "description": "Captain Willard is sent to Cambodia on a dangerous mission to assassinate a renegade colonel who has won the trust of a local tribe.",
+    "image": "https://upload.wikimedia.org/wikipedia/en/c/c2/Apocalypse_Now_poster.jpg",
+    "runningTime": 153 
+   },
+   {
+    "id": 4,
+    "name": "White Men Can't Jump",
+    "director": "Ron Shelton",
+    "releaseYear": 1992,
+    "description": "Billy, a hustler, makes a living out of conning African American players into believing that he cannot play basketball. He teams up with Sidney, one of his victims, to double his chances.",
+    "image": "https://m.media-amazon.com/images/M/MV5BMTc5ZjE2MmEtYWIxYi00OGY0LTk0ZTUtMzJiYjI4OWZmNTVmXkEyXkFqcGdeQXVyNzc5MjA3OA@@._V1_.jpg",
+    "runningTime": 115 
+   },
+   {
+    "id": 5,
+    "name": "Motherless Brooklyn",
+    "director": "Edward Norton",
+    "releaseYear": 2019,
+    "description": "Lionel, a private detective with Tourette syndrome, sets out to uncover the mystery behind his mentor Frank's murder. However, he stumbles upon a larger conspiracy.",
+    "image": "https://rockandfilms.es/wp-content/uploads/2020/01/111111-2.jpg",
+    "runningTime": 114 
+   }
+  ]
+ }
